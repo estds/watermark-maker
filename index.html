@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>水印助手</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="my-3">水印助手</h1>
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col left">
+          <div id="preview">
+            <img id="preview-img" title="可长按或右键保存" src="" style="display:none" class="img-fluid">
+          </div>
+          <canvas id="canvas" class="d-none"></canvas>
+        </div>
+        <div class="col right">
+
+          <div class="mb-3">
+            <label class="form-label" for="upload">选择图片</label>
+            <input id="upload" type="file" accept="image/*" title="upload" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="content">水印文字</label>
+            <input id="content" type="text" value="仅作某某用途之用" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="color">水印颜色</label>
+            <input id="color" type="color" value="#ffffff" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="alpha">不透明度</label>
+            <input id="alpha" type="range" min="10" max="100" value="50" class="form-range">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="size">水印大小</label>
+            <input id="size" type="range" min="1" max="10" value="5" step="0.2" class="form-range">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="gap">水印间隔</label>
+            <input id="gap" type="range" min="20" max="300" value="150" class="form-range">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="rotate">水印角度</label>
+            <input id="rotate" type="range" min="-70" max="70" value="-45" class="form-range">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="font">水印字体</label>
+            <input id="font" type="text" value="sans-serif" class="form-control">
+          </div>
+
+          <a id='download' href="javascript:alert('请先打开图片')" download class="btn btn-success">保存图片</a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script src="./do.js"></script>
+  </body>
+
+</html>
